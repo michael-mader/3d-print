@@ -20,7 +20,7 @@ Die harten Fakten, aktuellen Preise, Hardware-Empfehlungen und Filament-Regeln (
 
 Die Webseite wird automatisch über GitHub Pages gehostet.
 
-* URL: `https://<dein-github-name>.github.io/<repo-name>/` *(Hinweis: Trage hier nach dem ersten Deploy deine echte URL ein)*
+* URL: [https://michael-mader.github.io/3d-print](https://michael-mader.github.io/3d-print)
 
 Um den Guide anzupassen:
 
