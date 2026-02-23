@@ -1,1 +1,342 @@
-Empty for now
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bambu Lab A1 - Einsteiger Guide</title>
+    <style>
+        :root {
+            --primary: #00A651; /* Bambu Green Style */
+            --dark: #1a1a1a;
+            --light: #f4f4f4;
+            --warning: #ffcc00;
+            --danger: #ff4d4d;
+            --info: #3498db;
+            --purple: #9b59b6;
+            --orange: #e67e22;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: var(--dark);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--primary);
+        }
+
+        h1 { margin: 0; font-size: 2.5rem; }
+        h2 { color: var(--primary); border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 40px; }
+        h3 { color: var(--dark); margin-top: 25px; }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: var(--light);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--primary);
+        }
+
+        .card.warning { border-left-color: var(--warning); background-color: #fffdf0; }
+        .card.danger { border-left-color: var(--danger); background-color: #fff0f0; }
+        .card.info { border-left-color: var(--info); background-color: #f0f8ff; }
+        .card.purple { border-left-color: var(--purple); background-color: #fbf0ff; }
+        .card.orange { border-left-color: var(--orange); background-color: #fff8f0; }
+
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+
+        .tag {
+            display: inline-block;
+            background: #e0e0e0;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+        .tag-green { background: #d1fae5; color: #065f46; }
+        .tag-red { background: #fee2e2; color: #991b1b; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        th { background-color: var(--light); }
+
+        .checklist label { display: block; margin-bottom: 10px; cursor: pointer; }
+        
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #666;
+            border-top: 1px solid #eee;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8rem; }
+            .card-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>Bambu Lab A1</h1>
+        <p>Dein kompakter Start-Guide für den perfekten Druck</p>
+    </div>
+</header>
+
+<div class="container">
+
+    <section>
+        <h2>1. Der Slicer (Die Software)</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>Bambu Studio</h3>
+                <span class="tag tag-green">Empfehlung für Start</span>
+                <p>Der offizielle Slicer. Perfekt integriert mit WLAN, Kamera und MakerWorld.</p>
+                <ul>
+                    <li>✅ Einfachste Bedienung</li>
+                    <li>✅ Synchronisiert mit Handy-App</li>
+                    <li>✅ "Out of the Box" perfekt</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>OrcaSlicer</h3>
+                <span class="tag">Für Profis</span>
+                <p>Die erweiterte Version von Bambu Studio. Nutze dies später für Fein-Tuning.</p>
+                <ul>
+                    <li>✅ Erweiterte Kalibrierung (Flow, Pressure Advance)</li>
+                    <li>✅ Mehr Einstellungen</li>
+                </ul>
+            </div>
+            <div class="card warning">
+                <h3>Cura</h3>
+                <span class="tag tag-red">Nicht empfohlen</span>
+                <p>Funktioniert, aber du verlierst viele Features des A1 (WLAN, AMS-Steuerung, Kamera).</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>2. Must-Haves zum Selbstrucken</h2>
+        <p>Suche diese Teile auf <strong>MakerWorld</strong> und drucke sie als erstes:</p>
+        <div class="card-grid">
+            <div class="card">
+                <h3>Priorität 1: Sicherheit & Sauberkeit</h3>
+                <ul>
+                    <li>🗑️ <strong>Poop Bucket / Purge Deflector:</strong> Fängt den Filament-Müll auf. (Wichtig!)</li>
+                    <li>🔌 <strong>Bed Cable Strain Relief:</strong> Schützt das Heizbett-Kabel vor Knicken.</li>
+                    <li>🔪 <strong>Plastik-Schaber (Scraper):</strong> Um die goldene Platte nicht zu zerkratzen.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Priorität 2: Zubehör (Optional)</h3>
+                <ul>
+                    <li>⭕ <strong>Spulen-Adapter (für AMS Lite):</strong> Falls du Pappspulen von Drittanbietern nutzt.</li>
+                    <li>🔧 <strong>Werkzeug-Halter (Tool Holder):</strong> Clip für den oberen Rahmen.</li>
+                    <li>🤏 <strong>PTFE Removal Tool:</strong> Hilft beim Lösen der Schläuche.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card warning" style="margin-top: 15px;">
+            <strong>⚠️ Warnung:</strong> Montiere das AMS Lite <u>nicht</u> oben auf den Querrahmen (Top Mount). Das macht den Drucker instabil und verschlechtert die Qualität!
+        </div>
+    </section>
+
+    <section>
+        <h2>3. Welches Filament nutzen?</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Material</th>
+                    <th>Eignung A1</th>
+                    <th>AMS Lite?</th>
+                    <th>Info</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>PLA</strong></td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                    <td>Ja</td>
+                    <td>Standard. Einfach, hart, verzieht sich nicht. Nicht hitzefest (>55°C).</td>
+                </tr>
+                <tr>
+                    <td><strong>PETG</strong></td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                    <td>Ja</td>
+                    <td>Hitzefester (>75°C), flexibler, gut für draußen. Zieht Fäden.</td>
+                </tr>
+                <tr>
+                    <td><strong>TPU</strong> (Gummi)</td>
+                    <td>⭐⭐⭐⭐</td>
+                    <td><span class="tag tag-red">NEIN</span></td>
+                    <td>Muss über externen Halter gedruckt werden! Verstopft das AMS.</td>
+                </tr>
+                <tr>
+                    <td><strong>ABS / ASA</strong></td>
+                    <td>⭐⭐</td>
+                    <td>Ja</td>
+                    <td>Schwierig ohne Gehäuse (Warping). Braucht gute Lüftung (Dämpfe).</td>
+                </tr>
+                <tr>
+                    <td><strong>Carbon / Glow</strong></td>
+                    <td>⭐⭐⭐</td>
+                    <td>Ja</td>
+                    <td><strong>Achtung:</strong> Ruiniert die Standard-Düse. Nur mit "Hardened Steel Nozzle" drucken!</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>3b. Material-Details & Hersteller</h2>
+        
+        <div class="card-grid">
+            <div class="card purple">
+                <h3>PLA Varianten (Optik-König)</h3>
+                <ul>
+                    <li><strong>Standard:</strong> Glänzt leicht, stabil.</li>
+                    <li><strong>Matte:</strong> Edel, unsichtbare Schichten.</li>
+                    <li><strong>Silk:</strong> Hochglanz (Gold/Silber). ⚠️ Schwächer!</li>
+                    <li><strong>Hersteller:</strong> Sunlu, eSun, Elegoo, Bambu.</li>
+                </ul>
+            </div>
+            
+            <div class="card orange">
+                <h3>PETG Varianten (Funktions-König)</h3>
+                <ul>
+                    <li><strong>Standard/Translucent:</strong> Glänzend. Lichtdurchlässig (toll für Lampen!).</li>
+                    <li><strong>PETG-CF (Carbon):</strong> Mattes Schwarz, sehr steif. ⚠️ Nur mit gehärteter Düse!</li>
+                    <li><strong>High Speed:</strong> Wichtig für den A1, da normales PETG oft zu zäh fließt.</li>
+                    <li><strong>Hersteller:</strong> Sunlu (Preis-Tipp), Jayo, eSun.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card warning" style="margin-top: 15px;">
+            <strong>⚠️ Das Pappspulen-Problem:</strong> Das AMS Lite mag keine Pappspulen (rutschen durch oder stauben). Drucke für eSun, Elegoo oder Overture unbedingt <strong>"Spool Adapter"</strong> von MakerWorld, bevor du sie nutzt!
+        </div>
+    </section>
+
+    <section>
+        <h2>4. Multi-Color & Material-Mix (AMS Lite)</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>🚫 Grundregel: Nicht mischen!</h3>
+                <p>Mische niemals verschiedene Material-Familien für ein festes Bauteil (z.B. Kopf aus PLA, Körper aus PETG).</p>
+                <ul>
+                    <li>Chemische Abstoßung = Bauteil zerfällt.</li>
+                    <li>Unterschiedliche Bett-Temperaturen (PLA wird weich bei PETG-Hitze).</li>
+                </ul>
+            </div>
+            <div class="card info">
+                <h3>💡 Der Profi-Trick: PETG als Support</h3>
+                <p>Da PLA und PETG <strong>nicht</strong> aneinander haften, ist PETG das perfekte Trennmittel für PLA-Supports.</p>
+                <ul>
+                    <li>Stelle im Slicer <strong>"Support Interface"</strong> auf PETG.</li>
+                    <li>Das Modell wird gedruckt, die Kontaktfläche ist PETG.</li>
+                    <li><strong>Ergebnis:</strong> Stützen fallen fast von selbst ab, perfekte Oberfläche!</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3 style="margin-top: 25px;">Kompatibilitäts-Matrix</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Kombination</th>
+                    <th>Ergebnis</th>
+                    <th>Nutzung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>PLA + PLA (alle Arten)</strong></td>
+                    <td>✅ Perfekt</td>
+                    <td>Bunte Figuren, Deko (Matte, Silk, Standard)</td>
+                </tr>
+                <tr>
+                    <td><strong>PLA + PETG</strong></td>
+                    <td>❌ Hält nicht / 💡 Super als Support</td>
+                    <td>Nur als Trennschicht (Interface) nutzen!</td>
+                </tr>
+                <tr>
+                    <td><strong>PLA + TPU</strong></td>
+                    <td>❌ Geht nicht</td>
+                    <td>TPU kann nicht ins AMS Lite.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>5. Die 5 Goldenen Regeln (Fehlervermeidung)</h2>
+        <div class="checklist">
+            <div class="card warning">
+                <h3>⛔ 1. Finger weg von der Platte!</h3>
+                <p>Berühre niemals die goldene Druckfläche. Hautfett verhindert Haftung. Reinige sie regelmäßig mit <strong>Wasser & Spülmittel</strong> (besser als Alkohol).</p>
+            </div>
+            
+            <div class="card">
+                <h3>⚙️ 2. Richtige Platte im Slicer</h3>
+                <p>Stelle sicher, dass in Bambu Studio oben links <strong>"Textured PEI Plate"</strong> ausgewählt ist. Sonst haftet nichts.</p>
+            </div>
+
+            <div class="card">
+                <h3>💧 3. Trockenes Filament (Wichtig bei PETG!)</h3>
+                <p>Nasses Filament knistert und druckt schlecht. Lagerung in Boxen oder Beuteln mit Silicat-Kugeln.</p>
+            </div>
+
+            <div class="card danger">
+                <h3>👀 4. Beobachte den ersten Layer</h3>
+                <p>Bleibe die ersten 5 Minuten beim Drucker. Löst sich der Druck, stoppe sofort, um den "Blob of Death" am Druckkopf zu verhindern.</p>
+            </div>
+            
+            <div class="card">
+                <h3>🧱 5. Stabiler Untergrund</h3>
+                <p>Ein wackeliger Tisch verschlechtert das Druckbild. Stelle den A1 auf einen schweren, stabilen Tisch oder Boden.</p>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <p>Zusammenfassung für deinen 3D-Druck Start | Erstellt mit Gemini</p>
+</footer>
+
+</body>
+</html>
