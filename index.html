@@ -223,7 +223,6 @@
 
     <section>
         <h2>3b. Material-Details & Hersteller</h2>
-        
         <div class="card-grid">
             <div class="card purple">
                 <h3>PLA Varianten (Optik-König)</h3>
@@ -234,100 +233,117 @@
                     <li><strong>Hersteller:</strong> Sunlu, eSun, Elegoo, Bambu.</li>
                 </ul>
             </div>
-            
             <div class="card orange">
                 <h3>PETG Varianten (Funktions-König)</h3>
                 <ul>
-                    <li><strong>Standard/Translucent:</strong> Glänzend. Lichtdurchlässig (toll für Lampen!).</li>
+                    <li><strong>Standard/Translucent:</strong> Glänzend. Lichtdurchlässig.</li>
                     <li><strong>PETG-CF (Carbon):</strong> Mattes Schwarz, sehr steif. ⚠️ Nur mit gehärteter Düse!</li>
-                    <li><strong>High Speed:</strong> Wichtig für den A1, da normales PETG oft zu zäh fließt.</li>
+                    <li><strong>High Speed:</strong> Wichtig für den A1 (fließt besser).</li>
                     <li><strong>Hersteller:</strong> Sunlu (Preis-Tipp), Jayo, eSun.</li>
                 </ul>
             </div>
         </div>
-
         <div class="card warning" style="margin-top: 15px;">
-            <strong>⚠️ Das Pappspulen-Problem:</strong> Das AMS Lite mag keine Pappspulen (rutschen durch oder stauben). Drucke für eSun, Elegoo oder Overture unbedingt <strong>"Spool Adapter"</strong> von MakerWorld, bevor du sie nutzt!
+            <strong>⚠️ Das Pappspulen-Problem:</strong> Das AMS Lite mag keine Pappspulen. Drucke für eSun, Elegoo oder Overture unbedingt <strong>"Spool Adapter"</strong> von MakerWorld!
         </div>
     </section>
 
     <section>
-        <h2>3c. Filament-Pflege: Trocknen & Lagern</h2>
+        <h2>3c. Filament-Pflege: Messen & Trocknen</h2>
         <div class="card-grid">
             <div class="card info">
-                <h3>Warum trocknen?</h3>
-                <p>Filament ist "hygroskopisch", das heißt, es zieht Feuchtigkeit aus der Luft.</p>
+                <h3>Warum & Wann?</h3>
+                <p>Filament zieht Feuchtigkeit (hygroskopisch). Symptome: Knistern, Stringing, spröde Teile.</p>
                 <ul>
-                    <li><strong>Symptome:</strong> Knistern beim Drucken, starkes Stringing (Fäden) oder spröde Bauteile.</li>
-                    <li><strong>Besonders kritisch:</strong> PETG und TPU ziehen Feuchtigkeit deutlich schneller als Standard-PLA.</li>
+                    <li>✅ <strong>Idealbereich:</strong> &lt; 20% rF (Luftfeuchtigkeit).</li>
+                    <li>⚠️ <strong>Kritisch:</strong> &gt; 35% rF (besonders PETG/TPU).</li>
                 </ul>
             </div>
             <div class="card">
-                <h3>Wie trocknen?</h3>
-                <p>Feuchtes Material kann durch gezielte Wärme wieder einsatzbereit gemacht werden:</p>
+                <h3>Trocknungs-Methoden</h3>
                 <ul>
-                    <li>🔥 <strong>Filament-Trockner:</strong> Spezielle Heizboxen (z. B. von Sunlu), die das Material während des Drucks trocken halten.</li>
-                    <li>🏠 <strong>Dörrautomat:</strong> Ein herkömmlicher Obst-Trockner ist eine oft genutzte und preiswerte Alternative.</li>
-                    <li>⚠️ <strong>Backofen:</strong> Mit Vorsicht zu genießen! Viele Öfen schwanken zu stark in der Temperatur, was die Spule verschmelzen kann.</li>
+                    <li>🔥 <strong>Filament-Trockner:</strong> Beste Lösung für den Betrieb.</li>
+                    <li>🏠 <strong>Dörrautomat:</strong> Preiswerte und effektive Alternative.</li>
+                    <li>⚠️ <strong>Backofen:</strong> Oft zu ungenau; Spulendeformation droht!</li>
                 </ul>
             </div>
         </div>
-        <div class="card purple" style="margin-top: 15px;">
+        <div class="card danger" style="margin-top: 15px;">
+            <strong>💡 Besonders wichtig:</strong> TPU ist wie ein Schwamm. Es muss oft direkt aus einer aktiven Trockenbox gedruckt werden.
             <h3>💡 Lager-Tipp</h3>
             <p>Lagere angebrochene Rollen idealerweise in <strong>luftdichten Boxen oder Zip-Beuteln</strong> zusammen mit Silikat-Säckchen (Dry-Packs), um sie vor Luftfeuchtigkeit zu schützen.</p>
         </div>
     </section>
 
     <section>
-        <h2>3d. Filament-Pflege: Messen der Feuchtigkeit & Trocknung </h2>
+        <h2>4. Adhäsionshilfen & Mechanik</h2>
         <div class="card-grid">
-            <div class="card info">
-                <h3>Messmöglichkeiten & Werte</h3>
-                <p>Die relative Luftfeuchtigkeit (rF) in der Box ist entscheidend:</p>
-                <ul>
-                    <li>✅ <strong>Idealbereich:</strong> < 20% rF.</li>
-                    <li>⚠️ <strong>Kritisch:</strong> > 35% rF (besonders für PETG/TPU).</li>
-                    <li>⚖️ <strong>Wiege-Methode:</strong> Eine feuchte Rolle wird messbar schwerer.</li>
-                    <li>👂 <strong>Druck-Test:</strong> Knistern an der Düse bedeutet verdampfendes Wasser.</li>
-                </ul>
+            <div class="card">
+                <h3>Brim (Rand)</h3>
+                <p>Ein einlagiger Rand gegen Warping an den Ecken. Vergrößert die Kontaktfläche massiv.</p>
             </div>
             <div class="card">
-                <h3>Trocknungs-Methoden</h3>
-                <ul>
-                    <li>🔥 <strong>Filament-Trockner:</strong> Spezielle Heizboxen für den Betrieb.</li>
-                    <li>🏠 <strong>Dörrautomat:</strong> Preiswerte und sehr effektive Alternative.</li>
-                    <li>⚠️ <strong>Backofen:</strong> Oft zu ungenau; Spulendeformation droht!</li>
-                </ul>
+                <h3>Raft (Floss)</h3>
+                <p>Mehrlagige Struktur unter dem Modell. 2026 nur noch bei extremen Problemen oder unebenen Platten nötig.</p>
+            </div>
+            <div class="card info">
+                <h3>Skirt</h3>
+                <p>Dient nur der Stabilisierung des Materialflusses vor dem eigentlichen Druck.</p>
             </div>
         </div>
-        <div class="card danger" style="margin-top: 15px;">
-            <strong>💡 Besonders wichtig:</strong> TPU ist extrem hygroskopisch (wie ein Schwamm). Es muss oft direkt aus einer aktiven Trockenbox gedruckt werden.
+
+        <h3 style="margin-top: 25px;">Mechanische Stabilität durch Ausrichtung</h3>
+        <p>FDM-Drucke sind anisotrop (richtungsabhängig). Für funktionale Teile ist die Lastrichtung entscheidend:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Belastungsart</th>
+                    <th>Optimale Ausrichtung</th>
+                    <th>Grund</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Zugkraft</strong></td>
+                    <td>Parallel zu den Layern</td>
+                    <td>Filamentstränge tragen die Last.</td>
+                </tr>
+                <tr>
+                    <td><strong>Druckkraft</strong></td>
+                    <td>Senkrecht zu den Layern</td>
+                    <td>Schichten werden zusammengepresst.</td>
+                </tr>
+                <tr>
+                    <td><strong>Torsion</strong></td>
+                    <td>Diagonal (45°)</td>
+                    <td>Maximale Verteilung der Scherspannung.</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="card info">
+            <p><strong>💡 Bohrungen:</strong> Zylindrische Löcher sollten vertikal (X-Y Ebene) gedruckt werden, um maximale Rundheit zu garantieren.</p>
         </div>
     </section>
 
     <section>
-        <h2>4. Multi-Color & Material-Mix (AMS Lite)</h2>
+        <h2>5. Multi-Color & Support-Management</h2>
         <div class="card-grid">
             <div class="card">
-                <h3>🚫 Grundregel: Nicht mischen!</h3>
-                <p>Mische niemals verschiedene Material-Familien für ein festes Bauteil (z.B. Kopf aus PLA, Körper aus PETG).</p>
-                <ul>
-                    <li>Chemische Abstoßung = Bauteil zerfällt.</li>
-                    <li>Unterschiedliche Bett-Temperaturen (PLA wird weich bei PETG-Hitze).</li>
-                </ul>
+                <h3>Tree-Support</h3>
+                <p>Die bevorzugte Methode für organische Modelle oder Figuren. Spart Filament und lässt sich leichter entfernen ("Tree Slim").</p>
             </div>
             <div class="card info">
-                <h3>💡 Der Profi-Trick: PETG als Support</h3>
-                <p>Da PLA und PETG <strong>nicht</strong> aneinander haften, ist PETG das perfekte Trennmittel für PLA-Supports.</p>
+                <h3>💡 Profi-Trick: PETG als Trennschicht</h3>
+                <p>Da PLA und PETG chemisch nicht binden, ist PETG das perfekte Interface:</p>
                 <ul>
-                    <li>Stelle im Slicer <strong>"Support Interface"</strong> auf PETG.</li>
-                    <li>Das Modell wird gedruckt, die Kontaktfläche ist PETG.</li>
-                    <li><strong>Ergebnis:</strong> Stützen fallen fast von selbst ab, perfekte Oberfläche!</li>
+                    <li>Modell & Support aus <strong>PLA</strong>.</li>
+                    <li><strong>Support Interface:</strong> PETG wählen.</li>
+                    <li>Z-Abstand auf <strong>0 mm</strong> stellen.</li>
+                    <li><strong>Ergebnis:</strong> Makellose Unterseite, Stützen fallen einfach ab!</li>
                 </ul>
             </div>
         </div>
-
-        <h3 style="margin-top: 25px;">Kompatibilitäts-Matrix</h3>
+        <h3 style="margin-top: 25px;">Kompatibilitäts-Matrix (AMS Lite)</h3>
         <table>
             <thead>
                 <tr>
@@ -338,18 +354,18 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><strong>PLA + PLA (alle Arten)</strong></td>
+                    <td><strong>PLA + PLA</strong></td>
                     <td>✅ Perfekt</td>
-                    <td>Bunte Figuren, Deko (Matte, Silk, Standard)</td>
+                    <td>Bunte Figuren, Deko, Gehäuse.</td>
                 </tr>
                 <tr>
                     <td><strong>PLA + PETG</strong></td>
-                    <td>❌ Hält nicht / 💡 Super als Support</td>
-                    <td>Nur als Trennschicht (Interface) nutzen!</td>
+                    <td>❌ Hält nicht</td>
+                    <td>Nur als <strong>Trennschicht</strong> (Support Interface)!</td>
                 </tr>
                 <tr>
                     <td><strong>PLA + TPU</strong></td>
-                    <td>❌ Geht nicht</td>
+                    <td>❌ Unmöglich</td>
                     <td>TPU kann nicht ins AMS Lite.</td>
                 </tr>
             </tbody>
@@ -357,31 +373,46 @@
     </section>
 
     <section>
-        <h2>5. Die 5 Goldenen Regeln (Fehlervermeidung)</h2>
+        <h2>6. Ästhetik & Oberflächenveredelung</h2>
+        <div class="card-grid">
+            <div class="card orange">
+                <h3>Ironing (Glätten)</h3>
+                <p>Die heiße Düse bügelt die oberste Schicht glatt.</p>
+                <ul>
+                    <li>Optimaler Flow: ca. 20-30%.</li>
+                    <li>Speed: 30 mm/s.</li>
+                    <li>⚠️ Risiko: Verstopfung durch Heat Creep bei PLA.</li>
+                </ul>
+            </div>
+            <div class="card purple">
+                <h3>Fuzzy Skin</h3>
+                <p>Erzeugt eine raue, steinähnliche Textur an Außenwänden. Perfekt, um Schichtlinien zu verstecken und Griffigkeit zu erhöhen.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>7. Die 5 Goldenen Regeln (Fehlervermeidung)</h2>
         <div class="checklist">
             <div class="card warning">
                 <h3>⛔ 1. Finger weg von der Platte!</h3>
-                <p>Berühre niemals die goldene Druckfläche. Hautfett verhindert Haftung. Reinige sie regelmäßig mit <strong>Wasser & Spülmittel</strong> (besser als Alkohol).</p>
+                <p>Hautfett verhindert Haftung. Reinige sie regelmäßig mit <strong>Wasser & Spülmittel</strong>.</p>
             </div>
-            
             <div class="card">
                 <h3>⚙️ 2. Richtige Platte im Slicer</h3>
-                <p>Stelle sicher, dass in Bambu Studio oben links <strong>"Textured PEI Plate"</strong> ausgewählt ist. Sonst haftet nichts.</p>
+                <p>Wähle in Bambu Studio immer <strong>"Textured PEI Plate"</strong> aus.</p>
             </div>
-
             <div class="card">
-                <h3>💧 3. Trockenes Filament (Wichtig bei PETG!)</h3>
-                <p>Nasses Filament knistert und druckt schlecht. Lagerung in Boxen oder Beuteln mit Silicat-Kugeln.</p>
+                <h3>💧 3. Trockenes Filament</h3>
+                <p>Besonders PETG muss trocken sein. Lagere es in Zip-Beuteln mit Silikat.</p>
             </div>
-
             <div class="card danger">
                 <h3>👀 4. Beobachte den ersten Layer</h3>
-                <p>Bleibe die ersten 5 Minuten beim Drucker. Löst sich der Druck, stoppe sofort, um den "Blob of Death" am Druckkopf zu verhindern.</p>
+                <p>Bleibe die ersten 5 Minuten dabei, um den "Blob of Death" zu vermeiden.</p>
             </div>
-            
             <div class="card">
                 <h3>🧱 5. Stabiler Untergrund</h3>
-                <p>Ein wackeliger Tisch verschlechtert das Druckbild. Stelle den A1 auf einen schweren, stabilen Tisch oder Boden.</p>
+                <p>Stelle den A1 auf einen schweren, massiven Tisch für maximale Qualität.</p>
             </div>
         </div>
     </section>
@@ -389,7 +420,7 @@
 </div>
 
 <footer>
-    <p>Zusammenfassung für deinen 3D-Druck Start | Erstellt mit Gemini</p>
+    <p>Zusammenfassung für deinen 3D-Druck Start | Erstellt mit Gemini | Stand 2026</p>
 </footer>
 
 </body>
